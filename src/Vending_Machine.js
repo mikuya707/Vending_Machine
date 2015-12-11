@@ -32,15 +32,22 @@ VendingMachine.prototype.acceptCoins = function(coin){
 
 VendingMachine.prototype.selectProduct = function(name){
     var price = this.products[name];
-    if(this.inserted < price){
-        console.log(price);
-        console.log("Insert Coins");
+    if(price){
+        if(this.inserted < price){
+            console.log(price);
+            console.log("Insert Coins");
+        }
+        else{
+            this.returned = this.inserted - price;
+            this.inserted = 0;
+            console.log("Thank You");
+        }
     }
     else{
-        this.returned = this.inserted - price;
-        this.inserted = 0;
-        console.log("Thank You");
+        console.log("Sold Out");
+        console.log("Remainding Balance is " + this.inserted + " dollar");
     }
+
 }
 
 VendingMachine.prototype.returnCoins = function(){
