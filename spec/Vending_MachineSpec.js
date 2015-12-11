@@ -174,6 +174,20 @@ describe("Test Vending Machine features", function() {
     });
   });
 
+  describe("Vending Machine notifies customer when selected product is out of stock", function() {
+    beforeEach(function () {
+      spyOn(console, 'log');
+      var quarter = new Coin("quarter");
+      vm.acceptCoins(quarter);
+      vm.acceptCoins(quarter);
+      vm.selectProduct("jerkey");
+    });
+    it("customer should be notified jerkey is out of stock", function(){
+      expect(vm.inserted).toEqual(0.5);
+      expect(console.log).toHaveBeenCalledWith("Sold Out");
+      expect(console.log).toHaveBeenCalledWith("Remainding Balance is 0.5 dollar");
+    });
+  });
 
 
 });
