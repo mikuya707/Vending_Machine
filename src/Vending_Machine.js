@@ -98,5 +98,9 @@ VendingMachine.prototype.returnCoins = function(){
 }
 
 VendingMachine.prototype.total = function(){
-
+    var sum = parseFloat(0);
+    for( var coin in this.coins ) {
+        coin == "quarter" ?  sum += parseFloat(this.coins[coin]*0.25) : (coin == "dime" ? sum += parseFloat(this.coins[coin]*0.1) : sum += parseFloat(this.coins[coin]*0.05));
+    }
+    return sum;
 }
