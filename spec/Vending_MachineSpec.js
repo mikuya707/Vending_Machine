@@ -175,7 +175,7 @@ describe("Test Vending Machine features", function() {
       expect(vm.returned).toEqual(0);
       expect(console.log).toHaveBeenCalledWith("Insert Coins");
     });
-    it("customer should receive a quarter and a dime as change", function(){
+    it("customer should receive two quarters as change", function(){
       vm.selectProduct("chips");
       returnedCoins = vm.returnCoins();
       expect(returnedCoins["quarter"]).toEqual(2);
@@ -200,7 +200,7 @@ describe("Test Vending Machine features", function() {
       expect(console.log).toHaveBeenCalledWith("Remainding Balance is 0.5 dollar");
     });
   });
-  describe("Vending Machine notifies customer for exact change only", function() {
+  describe("Vending Machine notifies customer for exact change only with 0.25 dollar remained but expect to return for 0.35 dollar", function() {
     beforeEach(function () {
       spyOn(console, 'log');
       vm.init(0,2,1)

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4fdf2a8-982f-447e-92f8-7ec7d81178af" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/Vending_MachineSpec.js" afterPath="$PROJECT_DIR$/spec/Vending_MachineSpec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vending_Machine.js" afterPath="$PROJECT_DIR$/src/Vending_Machine.js" />
     </list>
     <ignored path="karenmao_java_audition.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,38 +27,8 @@
       <file leaf-file-name="Vending_MachineSpec.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/Vending_MachineSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87096775">
-              <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="include.preload.js" pinned="false" current-in-tab="false">
-        <entry file="mock://chrome-extension://cfhdojbkjhnklbpkdaibdccddilifddb/include.preload.js">
-          <provider selected="true" editor-type-id="vmFileEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jasmine.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/jasmine-2.3.0/jasmine.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3219" column="4" selection-start-line="3219" selection-start-column="4" selection-end-line="3219" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="60" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.6451613">
+              <caret line="221" column="5" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -78,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/Vending_Machine.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -544,17 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="60" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875">
@@ -565,8 +524,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/jasmine-2.3.0/jasmine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.27741936">
           <caret line="3219" column="4" selection-start-line="3219" selection-start-column="4" selection-end-line="3219" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -574,15 +544,15 @@
     <entry file="file://$PROJECT_DIR$/src/Vending_Machine.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/Vending_MachineSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87096775">
-          <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.6451613">
+          <caret line="221" column="5" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
           <folding />
         </state>
       </provider>
