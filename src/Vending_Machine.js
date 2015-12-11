@@ -42,3 +42,10 @@ VendingMachine.prototype.selectProduct = function(name){
         console.log("Thank You");
     }
 }
+
+VendingMachine.prototype.returnCoins = function(){
+    var change = this.returned;
+    this.returned = 0;
+    console.log("Insert Coins");
+    return change;
+}

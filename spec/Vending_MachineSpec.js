@@ -163,13 +163,14 @@ describe("Test Vending Machine features", function() {
       vm.acceptCoins(quarter);
       vm.acceptCoins(quarter);
       vm.acceptCoins(quarter);
-      vm.selectProduct(candy);
+      vm.selectProduct("candy");
     });
     it("customer should receive 0.35 as change", function(){
-      expect(vm.returnCoins()).toEqual(0.35);
       expect(vm.inserted).toEqual(0);
+      expect(vm.returned).toEqual(0.35);
+      expect(vm.returnCoins()).toEqual(0.35);
       expect(vm.returned).toEqual(0);
-      expect(console.log).toHaveBeenCalledWith("Insert Coin");
+      expect(console.log).toHaveBeenCalledWith("Insert Coins");
     });
   });
 
