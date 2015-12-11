@@ -4,7 +4,6 @@
     <list default="true" id="e4fdf2a8-982f-447e-92f8-7ec7d81178af" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/Vending_MachineSpec.js" afterPath="$PROJECT_DIR$/spec/Vending_MachineSpec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vending_Machine.js" afterPath="$PROJECT_DIR$/src/Vending_Machine.js" />
     </list>
     <ignored path="karenmao_java_audition.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Vending_MachineSpec.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Vending_MachineSpec.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/Vending_MachineSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.516129">
+              <caret line="132" column="30" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -58,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vending_Machine.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Vending_Machine.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vending_Machine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67741936">
-              <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -96,8 +95,8 @@
         <option value="$PROJECT_DIR$/src/Roman_Numeral.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/spec/Vending_MachineSpec.js" />
         <option value="$PROJECT_DIR$/src/Vending_Machine.js" />
+        <option value="$PROJECT_DIR$/spec/Vending_MachineSpec.js" />
       </list>
     </option>
   </component>
@@ -544,18 +543,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/Vending_MachineSpec.js">
+    <entry file="file://$PROJECT_DIR$/src/Vending_Machine.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vending_Machine.js">
+    <entry file="file://$PROJECT_DIR$/spec/Vending_MachineSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67741936">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.516129">
+          <caret line="132" column="30" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
           <folding />
         </state>
       </provider>

@@ -129,10 +129,11 @@ describe("Test Vending Machine features", function() {
   describe("Vending Machine select product with one dollar", function() {
     beforeEach(function () {
       spyOn(console, 'log');
-      vm.acceptCoins("quarter");
-      vm.acceptCoins("quarter");
-      vm.acceptCoins("quarter");
-      vm.acceptCoins("quarter");
+      var quarter = new Coin("quarter");
+      vm.acceptCoins(quarter);
+      vm.acceptCoins(quarter);
+      vm.acceptCoins(quarter);
+      vm.acceptCoins(quarter);
     });
     it("customer selects cola should return no money ", function(){
       vm.selectProduct("cola");
