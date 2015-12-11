@@ -159,6 +159,7 @@ describe("Test Vending Machine features", function() {
     var returnedCoins;
     beforeEach(function () {
       spyOn(console, 'log');
+      vm.init(2,2,1);
       var quarter = new Coin("quarter");
       vm.acceptCoins(quarter);
       vm.acceptCoins(quarter);
@@ -202,6 +203,7 @@ describe("Test Vending Machine features", function() {
   describe("Vending Machine notifies customer for exact change only", function() {
     beforeEach(function () {
       spyOn(console, 'log');
+      vm.init(0,2,1)
       var quarter = new Coin("quarter");
       vm.acceptCoins(quarter);
       vm.acceptCoins(quarter);
@@ -209,10 +211,13 @@ describe("Test Vending Machine features", function() {
       vm.acceptCoins(quarter);
       vm.selectProduct("candy");
     });
+    it("vending machine should return 0.25 as its current total", function(){
+      //vm.returnCoins();
+      expect(vm.total()).toEqual(0.25);
+    });
     it("customer should be notified for exact change only", function(){
-      expect(vm.inserted).toEqual(0.5);
-      expect(console.log).toHaveBeenCalledWith("Sold Out");
-      expect(console.log).toHaveBeenCalledWith("Remainding Balance is 0.5 dollar");
+      //vm.returnCoins();
+      expect(vm.returnCoins()).toEqual("Exact Change Only");
     });
   });
 

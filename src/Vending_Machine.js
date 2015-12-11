@@ -26,7 +26,12 @@ function VendingMachine(){
     }
 }
 
-VendingMachine.prototype.init = function(){
+VendingMachine.prototype.init = function(quarterQTY, dimeQTY, nickelQTY){
+    if(arguments.length > 0){
+        this.coins["quarter"] = quarterQTY;
+        this.coins["dime"] = dimeQTY;
+        this.coins["nickel"] = nickelQTY;
+    }
     return "Please insert coins";
 }
 
@@ -60,22 +65,38 @@ VendingMachine.prototype.returnCoins = function(){
     //this.returned = 0;
     var returnCoins = {"quarter": 0, "nickel": 0, "dime": 0};
     if(change % 0.25 === 0){
-        returnCoins["quarter"] = Math.floor(change / 0.25);
+        var quarter = Math.floor(change / 0.25);
+        if(this.coins["quarter"] >= quarter){
+            this.coins["quarter"] -= quarter;
+            returnCoins["quarter"] = quarter;
+        }
     }
     else{
         returnCoins["quarter"] = Math.floor(change / 0.25);
         change = Math.round((change - returnCoins["quarter"] * 0.25)*100) / 100;
         if(change % 0.1 === 0){
-            returnCoins["dime"] = Math.floor(change / 0.1);
+            var dime = Math.floor(change / 0.1);
+            if(this.coins["dime"] >= dime){
+                this.coins["dime"] -= dime;
+                returnCoins["dime"] = Math.floor(change / 0.1);
+            }
         }
         else{
             returnCoins["dime"] = Math.floor(change / 0.1);
-            change = Math.ceil((change - returnCoins["dime"] * 0.1) * 100) / 100;
-            returnCoins["nickel"] = Math.floor(change / 0.05);
+            change = Math.round((change - returnCoins["dime"] * 0.1) * 100) / 100;
+            var nickel = Math.floor(change / 0.05);
+            if(this.coins["nickel"] >= nickel) {
+                this.coins['nickel'] -= nickel;
+                returnCoins["nickel"] = nickel;
+            }
         }
     }
+
     this.returned = 0;
     console.log("Insert Coins");
     return returnCoins;
 }
 
+VendingMachine.prototype.total = function(){
+
+}
