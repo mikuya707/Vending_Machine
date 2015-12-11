@@ -155,6 +155,26 @@ describe("Test Vending Machine features", function() {
     });
   });
 
+  describe("Vending Machine returns correct change to customer", function() {
+    beforeEach(function () {
+      spyOn(console, 'log');
+      var quarter = new Coin("quarter");
+      vm.acceptCoins(quarter);
+      vm.acceptCoins(quarter);
+      vm.acceptCoins(quarter);
+      vm.acceptCoins(quarter);
+      vm.selectProduct(candy);
+    });
+    it("customer should receive 0.35 as change", function(){
+      expect(vm.returnCoins()).toEqual(0.35);
+      expect(vm.inserted).toEqual(0);
+      expect(vm.returned).toEqual(0);
+      expect(console.log).toHaveBeenCalledWith("Insert Coin");
+    });
+  });
+
+
+
 });
 
 
