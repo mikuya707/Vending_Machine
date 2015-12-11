@@ -52,6 +52,21 @@ describe("Test Vending Machine features", function() {
       expect(vm.returned).toEqual(0);
     });
   });
+  describe("Vending Machine should accept valid coins and reject invalid coins", function() {
+    describe("Inserted Nickel", function () {
+      var nickel;
+      beforeEach(function () {
+        nickel = new Coin("nickel");
+        vm.acceptCoins(nickel);
+      });
+      it("Vending Machine should accept nickel", function () {
+        expect(vm.inserted).toEqual(0.05);
+      });
+      it("Vending Machine should not return nickel", function () {
+        expect(vm.returned).toEqual(0);
+      });
+    });
+  });
 
 
 });

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4fdf2a8-982f-447e-92f8-7ec7d81178af" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/Vending_MachineSpec.js" afterPath="$PROJECT_DIR$/spec/Vending_MachineSpec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vending_Machine.js" afterPath="$PROJECT_DIR$/src/Vending_Machine.js" />
-    </list>
+    <list default="true" id="e4fdf2a8-982f-447e-92f8-7ec7d81178af" name="Default" comment="" />
     <ignored path="karenmao_java_audition.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Vending_MachineSpec.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Vending_MachineSpec.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/Vending_MachineSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.3548387">
+              <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="43" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -57,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vending_Machine.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Vending_Machine.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vending_Machine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5483871">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -543,18 +540,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/Vending_MachineSpec.js">
+    <entry file="file://$PROJECT_DIR$/src/Vending_Machine.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vending_Machine.js">
+    <entry file="file://$PROJECT_DIR$/spec/Vending_MachineSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5483871">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3548387">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="43" selection-end-column="2" />
           <folding />
         </state>
       </provider>
