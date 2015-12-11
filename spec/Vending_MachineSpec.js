@@ -42,7 +42,15 @@ describe("Test Vending Machine features", function() {
   });
 
   describe("Vending Machine is initialized", function() {
-    expect(vm.init()).toEqual("Please insert coins");
+    it("instruct user to insert coins", function(){
+      expect(vm.init()).toEqual("Please insert coins");
+    });
+    it("initial inserted coin should be zero", function(){
+      expect(vm.inserted).toEqual(0);
+    });
+    it("initial returned coin should be zero", function(){
+      expect(vm.returned).toEqual(0);
+    });
   });
 
 
