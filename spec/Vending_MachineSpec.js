@@ -66,6 +66,58 @@ describe("Test Vending Machine features", function() {
         expect(vm.returned).toEqual(0);
       });
     });
+
+    describe("Inserted Dime", function () {
+      var dime;
+      beforeEach(function () {
+        dime = new Coin("dime");
+        vm.acceptCoins(dime);
+      });
+      it("Vending Machine should accept dime", function () {
+        expect(vm.inserted).toEqual(0.1);
+      });
+      it("Vending Machine should not return dime", function () {
+        expect(vm.returned).toEqual(0);
+      });
+    });
+  });
+  describe("Inserted Quarter", function () {
+    var quarter;
+    beforeEach(function () {
+      quarter = new Coin("quarter");
+      vm.acceptCoins(quarter);
+    });
+    it("Vending Machine should accept quarter", function () {
+      expect(vm.inserted).toEqual(0.25);
+    });
+    it("Vending Machine should not return quarter", function () {
+      expect(vm.returned).toEqual(0);
+    });
+  });
+  describe("Inserted Penny", function () {
+    var penny;
+    beforeEach(function () {
+      penny = new Coin("penny");
+      vm.acceptCoins(penny);
+    });
+    it("Vending Machine should reject penny", function () {
+      expect(vm.inserted).toEqual(0);
+      expect(vm.returned).toEqual(0.01);
+    });
+  });
+  describe("Vending Machine has products", function() {
+    it("contains three products", function(){
+      expect(vm.products.length).toEqual(3);
+    });
+    it("cola for 1 dollar", function(){
+      expect(vm.selectProduct("cola")).toEqual(1);
+    });
+    it("chips for 0.5 dollar", function(){
+      expect(vm.selectProduct("chips")).toEqual(0.5);
+    });
+    it("candy for 0.65 dollar", function(){
+      expect(vm.selectProduct("candy")).toEqual(0.65);
+    });
   });
 
 
