@@ -106,20 +106,28 @@ describe("Test Vending Machine features", function() {
     });
   });
   describe("Vending Machine has products", function() {
+    beforeEach(function () {
+      spyOn(console, 'log');
+    });
     it("contains three products", function(){
-      expect(vm.products.length).toEqual(3);
+      expect(Object.keys(vm.products).length).toEqual(3);
     });
     it("cola for 1 dollar", function(){
-      expect(vm.selectProduct("cola")).toEqual(1);
+      vm.selectProduct("cola");
+      expect(console.log).toHaveBeenCalledWith(1);
     });
     it("chips for 0.5 dollar", function(){
-      expect(vm.selectProduct("chips")).toEqual(0.5);
+      vm.selectProduct("chips");
+      expect(console.log).toHaveBeenCalledWith(0.5);
     });
     it("candy for 0.65 dollar", function(){
-      expect(vm.selectProduct("candy")).toEqual(0.65);
+      vm.selectProduct("candy");
+      expect(console.log).toHaveBeenCalledWith(0.65);
     });
   });
 
 
 });
+
+
 

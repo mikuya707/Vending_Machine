@@ -14,6 +14,11 @@ function Coin(name){
 function VendingMachine(){
     this.inserted = 0;
     this.returned = 0;
+    this.products = {
+        "cola": 1,
+        "chips": 0.5,
+        "candy": 0.65
+    }
 }
 
 VendingMachine.prototype.init = function(){
@@ -23,4 +28,16 @@ VendingMachine.prototype.init = function(){
 VendingMachine.prototype.acceptCoins = function(coin){
    coin.weight > 0.1 && coin.size > 0.5 ? this.inserted += coin.value : this.returned += coin.value;
 
+}
+
+VendingMachine.prototype.selectProduct = function(name){
+    var price = this.products[name];
+    if(this.inserted < price){
+        console.log(price);
+        console.log("Insert Coins");
+    }
+    else{
+        this.returned = this.inserted - price;
+        console.log("Thank You");
+    }
 }
