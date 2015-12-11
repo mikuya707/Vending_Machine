@@ -35,5 +35,3 @@ describe("Test Coins", function() {
 
 });
 
-
-
