@@ -35,3 +35,16 @@ describe("Test Coins", function() {
 
 });
 
+describe("Test Vending Machine features", function() {
+  var vm;
+  beforeEach(function() {
+    vm = new VendingMachine();
+  });
+
+  describe("Vending Machine is initialized", function() {
+    expect(vm.init()).toEqual("Please insert coins");
+  });
+
+
+});
+
