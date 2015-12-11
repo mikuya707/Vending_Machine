@@ -19,3 +19,8 @@ function VendingMachine(){
 VendingMachine.prototype.init = function(){
     return "Please insert coins";
 }
+
+VendingMachine.prototype.acceptCoins = function(coin){
+   coin.weight > 0.1 && coin.size > 0.5 ? this.inserted += coin.value : this.returned += coin.value;
+
+}
