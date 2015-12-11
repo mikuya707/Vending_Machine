@@ -38,6 +38,7 @@ VendingMachine.prototype.selectProduct = function(name){
     }
     else{
         this.returned = this.inserted - price;
+        this.inserted = 0;
         console.log("Thank You");
     }
 }

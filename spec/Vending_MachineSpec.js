@@ -126,6 +126,33 @@ describe("Test Vending Machine features", function() {
     });
   });
 
+  describe("Vending Machine select product with one dollar", function() {
+    beforeEach(function () {
+      spyOn(console, 'log');
+      vm.acceptCoins("quarter");
+      vm.acceptCoins("quarter");
+      vm.acceptCoins("quarter");
+      vm.acceptCoins("quarter");
+    });
+    it("customer selects cola should return no money ", function(){
+      vm.selectProduct("cola");
+      expect(vm.inserted).toEqual(0);
+      expect(vm.returned).toEqual(0);
+      expect(console.log).toHaveBeenCalledWith("Thank You");
+    });
+    it("customer selects chips should return 0.5 dollar ", function(){
+      vm.selectProduct("chips");
+      expect(vm.inserted).toEqual(0);
+      expect(vm.returned).toEqual(0.5);
+      expect(console.log).toHaveBeenCalledWith("Thank You");
+    });
+    it("customer selects candy should return 0.35 dollar ", function(){
+      vm.selectProduct("candy");
+      expect(vm.inserted).toEqual(0);
+      expect(vm.returned).toEqual(0.35);
+      expect(console.log).toHaveBeenCalledWith("Thank You");
+    });
+  });
 
 });
 
