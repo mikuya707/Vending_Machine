@@ -156,6 +156,7 @@ describe("Test Vending Machine features", function() {
   });
 
   describe("Vending Machine returns correct change to customer", function() {
+    var returnedCoins;
     beforeEach(function () {
       spyOn(console, 'log');
       var quarter = new Coin("quarter");
@@ -163,18 +164,28 @@ describe("Test Vending Machine features", function() {
       vm.acceptCoins(quarter);
       vm.acceptCoins(quarter);
       vm.acceptCoins(quarter);
-      vm.selectProduct("candy");
     });
-    it("customer should receive 0.35 as change", function(){
-      expect(vm.inserted).toEqual(0);
-      expect(vm.returned).toEqual(0.35);
-      expect(vm.returnCoins()).toEqual(0.35);
+    it("customer should receive a quarter and a dime as change", function(){
+      vm.selectProduct("candy");
+      returnedCoins = vm.returnCoins();
+      expect(returnedCoins["quarter"]).toEqual(1);
+      expect(returnedCoins["dime"]).toEqual(1);
+      expect(returnedCoins["nickel"]).toEqual(0);
+      expect(vm.returned).toEqual(0);
+      expect(console.log).toHaveBeenCalledWith("Insert Coins");
+    });
+    it("customer should receive a quarter and a dime as change", function(){
+      vm.selectProduct("chips");
+      returnedCoins = vm.returnCoins();
+      expect(returnedCoins["quarter"]).toEqual(2);
+      expect(returnedCoins["dime"]).toEqual(0);
+      expect(returnedCoins["nickel"]).toEqual(0);
       expect(vm.returned).toEqual(0);
       expect(console.log).toHaveBeenCalledWith("Insert Coins");
     });
   });
 
-  describe("Vending Machine notifies customer when selected product is out of stock", function() {
+  describe("Vending Machine notifies customer when selected product is sold out", function() {
     beforeEach(function () {
       spyOn(console, 'log');
       var quarter = new Coin("quarter");
@@ -188,7 +199,22 @@ describe("Test Vending Machine features", function() {
       expect(console.log).toHaveBeenCalledWith("Remainding Balance is 0.5 dollar");
     });
   });
-
+  describe("Vending Machine notifies customer for exact change only", function() {
+    beforeEach(function () {
+      spyOn(console, 'log');
+      var quarter = new Coin("quarter");
+      vm.acceptCoins(quarter);
+      vm.acceptCoins(quarter);
+      vm.acceptCoins(quarter);
+      vm.acceptCoins(quarter);
+      vm.selectProduct("candy");
+    });
+    it("customer should be notified for exact change only", function(){
+      expect(vm.inserted).toEqual(0.5);
+      expect(console.log).toHaveBeenCalledWith("Sold Out");
+      expect(console.log).toHaveBeenCalledWith("Remainding Balance is 0.5 dollar");
+    });
+  });
 
 });
 

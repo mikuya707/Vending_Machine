@@ -14,6 +14,11 @@ function Coin(name){
 function VendingMachine(){
     this.inserted = 0;
     this.returned = 0;
+    this.coins = {
+        "nickel": 0,
+        "dime": 0,
+        "quarter": 0
+    }
     this.products = {
         "cola": 1,
         "chips": 0.5,
@@ -52,7 +57,25 @@ VendingMachine.prototype.selectProduct = function(name){
 
 VendingMachine.prototype.returnCoins = function(){
     var change = this.returned;
+    //this.returned = 0;
+    var returnCoins = {"quarter": 0, "nickel": 0, "dime": 0};
+    if(change % 0.25 === 0){
+        returnCoins["quarter"] = Math.floor(change / 0.25);
+    }
+    else{
+        returnCoins["quarter"] = Math.floor(change / 0.25);
+        change = Math.round((change - returnCoins["quarter"] * 0.25)*100) / 100;
+        if(change % 0.1 === 0){
+            returnCoins["dime"] = Math.floor(change / 0.1);
+        }
+        else{
+            returnCoins["dime"] = Math.floor(change / 0.1);
+            change = Math.ceil((change - returnCoins["dime"] * 0.1) * 100) / 100;
+            returnCoins["nickel"] = Math.floor(change / 0.05);
+        }
+    }
     this.returned = 0;
     console.log("Insert Coins");
-    return change;
+    return returnCoins;
 }
+
