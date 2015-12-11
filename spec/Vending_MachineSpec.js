@@ -216,8 +216,8 @@ describe("Test Vending Machine features", function() {
       expect(vm.total()).toEqual(0.25);
     });
     it("customer should be notified for exact change only", function(){
-      //vm.returnCoins();
-      expect(vm.returnCoins()).toEqual("Exact Change Only");
+      vm.returnCoins();
+      expect(console.log).toHaveBeenCalledWith("Exact Change Only");
     });
   });
 
